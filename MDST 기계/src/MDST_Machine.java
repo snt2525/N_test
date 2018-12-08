@@ -20,6 +20,7 @@ public class MDST_Machine {
 		if(num == 1) { 										    //자연 수 1이 만들어졌을 때, 연산 코드와 연산 횟수 저장			
 			minCalCnt = cnt;
 			minCalCode = calCode;
+			System.out.print(cnt +" , " +calCode);
 			return;
 		}
 		
@@ -73,7 +74,7 @@ public class MDST_Machine {
 		
 		m.DFS("", 0, n);
 		
-		if(m.minCalCode == "")
+		if(m.minCalCode == "" && m.minCalCnt == Integer.MAX_VALUE)
 			System.out.println("NO ANSWER");
 		else
 			System.out.println(m.minCalCode);
